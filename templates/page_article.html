@@ -1,0 +1,14 @@
+{% extends 'aoirint_miyadaiku_theme_blog!page_article.html' %}
+
+
+{% block head %}
+{{ super() }}
+
+<script>
+  const pathname = location.pathname;
+  const newUrl = 'https://aoirint.com/blog' + pathname;
+
+  location.href = newUrl;
+</script>
+
+{% endblock head %}
