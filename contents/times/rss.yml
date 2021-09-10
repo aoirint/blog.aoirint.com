@@ -1,0 +1,5 @@
+type: feed
+feedtype: rss
+feed_num_articles: 20
+directories:
+  - post/

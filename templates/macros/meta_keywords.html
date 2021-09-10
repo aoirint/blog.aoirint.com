@@ -1,0 +1,13 @@
+{% macro meta_keywords(page) -%}
+{%- set keywords = list(page.tags or []) -%}
+{%- if page.category -%}
+  {%- set keywords = keywords + [ page.category ] -%}
+{%- endif -%}
+{%- set keywords = keywords | join(",") %}
+{%- if not keywords and page.get_config('site_keywords') -%}
+  {% set keywords = page.site_keywords %}
+{%- endif -%}
+{%- if keywords -%}
+<meta name="keywords" content="{{ keywords }}">
+{%- endif -%}
+{%- endmacro %}

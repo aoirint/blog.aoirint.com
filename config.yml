@@ -1,11 +1,11 @@
 # Miyadaiku config file
 
 # Base URL of the site
-site_url: https://blog.aoirint.com
+site_url: https://aoirint.com/
 
 # Title of the site
-site_title: えやみぐさ
-site_description: Blog by aoirint
+site_title: aoirint
+site_description: aoirint's Website
 site_keywords: 技術,ブログ
 
 # Default language code
@@ -23,16 +23,21 @@ favicon: /favicon.ico
 
 og_image: /ogp.png
 
-ga_tracking_id: UA-157155944-5
+ga_tracking_id: UA-157155944-3
 
 twitter_name: aoirint
 github_name: aoirint
-author_url: https://aoirint.com
+author_url: https://aoirint.com/
 
 custom_search_engine_id: 4b57e8a4ef2a8c489
 
 strip_directory_index: 'index.html'
 
+pygments_style: native
+
 # List of site theme
 themes:
-  - aoirint_miyadaiku_theme_blog
+  - miyadaiku.themes.pygments
+  - miyadaiku_theme_fontawesome
+
+article_template: blog/page_article.html
