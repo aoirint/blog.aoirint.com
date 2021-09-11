@@ -8,27 +8,20 @@
 
 {% block article_index %}
   <div class="article-index">
-
+    <h2>{{ groupby |capitalize }}: {{ group_value }}</h2>
+    <ul>
 {% for article in articles %}
-{% block article_box scoped %}
-
-    <article class="article">
-      {{ article_metadata(article, index_category='/index_category.yml', index_tag='/index_tag.yml') }}
-
-      <h2 class="article-title"><a href="{{ page.path_to(article) }}">{{ article.title }}</a></h2>
-
-{% set descr = (article.og_description or article.get_abstract(article.abstract_length)) %}
-{% if descr %}
-      <div class='article-summary'>
-        {{ descr | striptags }}
-      </div>
-{% endif %}
-    </article>
-
-    <hr>
-
-{% endblock article_box %}
+      <li>
+        {{ article.link() }}
+        <small>
+          {% if article.updated and article.date != article.updated -%}
+            (updated: {{ article.updated.strftime('%Y-%m-%d') }})
+          {%- elif article.date -%}
+            (created: {{ article.date.strftime('%Y-%m-%d') }})
+          {%- endif %}
+        </small>
 {% endfor %}
+    </ul>
   </div>
 
 </div>

@@ -1,0 +1,4 @@
+{% macro google_custom_search(page) -%}
+<script async src="https://cse.google.com/cse.js?cx={{ page.custom_search_engine_id }}"></script>
+<div class="gcse-search"></div>
+{%- endmacro %}
