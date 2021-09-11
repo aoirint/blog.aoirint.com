@@ -1,5 +1,6 @@
 ---
 title: Category Index
+no_metadata: true
 ---
 # Category Index
 

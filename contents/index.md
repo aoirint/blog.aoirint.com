@@ -1,5 +1,6 @@
 ---
 no_page_title: true
+no_metadata: true
 ---
 # Index
 

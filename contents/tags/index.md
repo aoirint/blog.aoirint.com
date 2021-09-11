@@ -1,5 +1,6 @@
 ---
 title: Tag Index
+no_metadata: true
 ---
 # Tag Index
 
