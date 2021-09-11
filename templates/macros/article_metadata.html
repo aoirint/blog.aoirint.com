@@ -22,6 +22,19 @@
 {% endfor %}
   </div>
 
+{% if article.contentpath[0][0] == 'entry' %}
+  <div style="display: flex; gap: .5rem;">
+    <a
+      href="https://github.com/aoirint/blog.aoirint.com/edit/main/contents/{{ '/'.join(article.contentpath[0]) }}/{{ article.name }}">
+      編集
+    </a>
+    <a
+      href="https://github.com/aoirint/blog.aoirint.com/tree/main/contents/{{ '/'.join(article.contentpath[0]) }}/{{ article.name }}">
+      ソース
+    </a>
+  </div>
+{% endif %}
+
 </div>
 
 {%- endmacro %}
