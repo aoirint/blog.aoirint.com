@@ -1,6 +1,9 @@
+SHELL=/bin/bash
+
 .PHONY: serve
 serve:
-	miyadaiku-build . -sw -o ./public
+	if command -v xdg-open; then xdg-open "http://127.0.0.1:8803"; fi
+	miyadaiku-build . -sw -o ./public -p 8803
 
 .PHONY: build
 build:
