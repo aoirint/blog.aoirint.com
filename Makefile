@@ -20,7 +20,7 @@ init:
 .PHONY: new
 new:
 	$(eval YEAR=$(shell date '+%Y'))
-	$(eval NAME=$(shell pwgen -A 20))
+	$(eval NAME=$(shell pwgen -As 20))
 	$(eval DIR=contents/entry/$(YEAR)/$(NAME)/)
 	$(eval FILE=$(DIR)index.md)
 
