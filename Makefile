@@ -16,3 +16,18 @@ rebuild:
 .PHONY: init
 init:
 	git submodule update --init --recursive
+
+.PHONY: new
+new:
+	$(eval YEAR = $(shell date '+%Y'))
+	$(eval NAME = $(shell pwgen -A 20))
+	$(eval DIR=contents/entry/$(YEAR)/$(NAME)/)
+	$(eval FILE=$(DIR)index.md)
+
+	mkdir -p "$(DIR)"
+	editor "$(FILE)"
+
+.PHONY: clean
+clean:
+	find contents -type d -empty -print -delete
+
