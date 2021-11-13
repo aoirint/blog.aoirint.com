@@ -19,8 +19,8 @@ init:
 
 .PHONY: new
 new:
-	$(eval YEAR = $(shell date '+%Y'))
-	$(eval NAME = $(shell pwgen -A 20))
+	$(eval YEAR=$(shell date '+%Y'))
+	$(eval NAME=$(shell pwgen -A 20))
 	$(eval DIR=contents/entry/$(YEAR)/$(NAME)/)
 	$(eval FILE=$(DIR)index.md)
 
@@ -30,4 +30,3 @@ new:
 .PHONY: clean
 clean:
 	find contents -type d -empty -print -delete
-
