@@ -42,7 +42,7 @@ or you can check the docs: http://hexo.io/docs/
 
 ```shell
 $ hexo init .
-FATAL ~/git/vent.aoirint.com not empty, please run `hexo init` on an empty folder and then copy your files into it
+FATAL /path/to/myrepo not empty, please run `hexo init` on an empty folder and then copy your files into it
 FATAL {
   err: Error: target not empty
 ...
